@@ -11,22 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(["prefix" => "pessoas"], function () {
+    Route::get("/", "PessoasController@index");
+    Route::get("/nova", "PessoasController@criarPessoa");
+    Route::get("/{id}/editar", "PessoasController@editar");
+    Route::get("/{id}/excluir", "PessoasController@excluir");
+    Route::get("/{id}/destroy", "PessoasController@destroy");
+    Route::post("/store", "PessoasController@store");
+    Route::post("/update", "PessoasController@update");
 });
-
-Route::group(['prefix' => 'pessoas'], function(){
-    Route::get('/', 'PessoasController@index');
-    Route::get('/novo', 'PessoasController@criarPessoa');
-    Route::post('/addP', 'PessoasController@addP');
-});
-
-// Route::get('/teste', function() {
-//     return view('teste');
-// });
-
-// Route::group(['prefix' => 'teste'], function() {
-//     Route::get('/', function() {
-//         return view('teste');
-//     });
-// });
