@@ -12,7 +12,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">OSM Teste</a>
+        <a class="navbar-brand" href="{{url('/')}}">Agenda Telefónica</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,12 +27,12 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Gerenciar Pessoas
+                        Gerenciar Contatos
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{url('/pessoas/nova')}}">Cadastrar Pessoas</a>
+                        <a class="dropdown-item" href="{{url('/pessoas/nova')}}">Cadastrar Contato</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{{url('/pessoas')}}">Pessoas Cadastradas</a>
+                        <a class="dropdown-item" href="{{url('/pessoas')}}">Contatos Cadastrados</a>
                     </div>
                 </li>
         </div>
